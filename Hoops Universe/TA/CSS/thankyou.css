@@ -1,0 +1,12 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1079px){
+    .backdrop{
+        padding-top: 48px;
+    }
+}

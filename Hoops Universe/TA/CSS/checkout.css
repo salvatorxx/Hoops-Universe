@@ -1,0 +1,134 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+/* PRODUCT */
+.product-container ul li{
+    list-style: none;
+    text-align: left;
+    padding: 20px;
+}
+
+#currentProduct{
+    width: 40%;
+    padding-left: 30px;
+    padding-right: 0px;
+    margin-left: 30px;
+}
+
+/* FORMS */
+.container{ 
+    width: auto; 
+    text-align: center;     
+    margin: 40px auto;
+}
+h3{
+    color: #1cb7b0; 
+    font-size: 3em; 
+    letter-spacing: 0.1em;
+    margin-top: 0px; 
+    margin-bottom: 10px; 
+}
+#frame{
+    width: 300px;
+    margin: 0px auto;
+    text-align: left;
+    box-sizing: border-box;
+}
+.form-group{
+    position: relative;
+    margin-bottom: 20px;
+}
+.form-group input{
+    width: 100%;
+    font-size: 1em;
+    color: grey;
+    padding: 10px 10px;
+    background: transparent;
+    border: 1px solid gray;
+    z-index: 9;
+    box-sizing: border-box;
+    display: block;
+}
+.form-group label{
+    position: absolute;
+    top: -2px;
+    padding: 11px 10px;
+    transition: all 200ms;
+    opacity: 0.5;
+    font-size: 1em;
+    z-index: -1;
+}
+.form-group input:focus + label,
+.form-group input:valid + label{
+    top: 7px;
+    left: 5px;
+    font-size: 0.8em;
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+    padding: 0px 10px;
+    background:#f9f9f9;
+    z-index:1;
+}
+textarea{
+    resize: none;
+    width: 300px;
+}
+
+#paymentMethod {
+    width: 100%;
+    border: 1px solid var(--select-border);
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
+#total-price{
+    text-align: center;
+}
+#QRCODE{
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1079px){
+    /* Product */
+    #currentProduct{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-height: min-content;
+    }
+    .product-container{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        width: 80%;
+        margin-top: 0;
+    }
+    #product-name, #product-price, #total-price, #qty, #size{
+        text-align: center;
+        margin: 0;
+    }
+    #product-price{
+        padding-top: 0;
+    }
+    ul{
+        padding-left: 0;
+    }
+}
+
+@media only screen and (min-width: 1080px){
+    .product-container{
+        margin: 50px;
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        padding-top: 81px;
+        height: 100vh;
+    }
+}

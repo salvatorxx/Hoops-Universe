@@ -1,0 +1,12 @@
+> CSS HOVER CATALOG
+https://www.youtube.com/watch?v=Cfv_9l8F0Lo&ab_channel=LoharTalk
+
+> FORM Styling
+wegodev.com
+
+> FaQ & collapsible
+https://www.w3schools.com/howto/howto_js_collapsible.asp
+https://hishot.himti.or.id/
+
+> NAVBAR
+https://www.w3schools.com/howto/howto_js_mobile_navbar.asp

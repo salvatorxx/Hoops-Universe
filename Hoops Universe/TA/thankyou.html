@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="CSS/thankyou.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="icon" href="Assets/icon.png">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Dropdown icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="js/helper.js"></script>
+
+    <title>Thank You!</title>
+</head>
+<body>
+    <header class="desktop-view">
+        <div class="logo">
+            <a href="index.html"><img src="Assets/logo.png" alt=""></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                
+                <div class="dropdown">
+                    <li><a href="shoes.html" class="dropbtn">Shoes</a></li>
+                    <div class="dropdown-content">
+                        <a href="shoes.html#new-arrival">New Arrival</a>
+                        <a href="shoes.html#best-seller">Best Seller</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <li><a href="accessories.html" class="dropbtn">Accessories</a></li>
+                    <div class="dropdown-content">
+                        <a href="accessories.html#new-arrival">New Arrival</a>
+                        <a href="accessories.html#jacket">Hoodies & Track Suit</a>
+                        <a href="accessories.html#basketball">Basketballs</a>
+                        <a href="accessories.html#jersey">Jersey</a>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <header class="mobile-view" id="mobile-nav">
+        <i class="fa fa-bars dropbtn-mobile" aria-hidden="true" onclick="dropdown()"></i>
+        <div id="content" class="dropdown-content-mobile">
+            <a href="index.html">Home</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="accessories.html">Accessories</a>
+        </div>
+
+        <img src="Assets/logo.png" alt="" id="logo-mobile" onclick="window.location.href='index.html'">
+    </header>
+
+    <section class="backdrop">
+        <img src="Assets/checkout.png" alt="" style="width: 100%;">
+    </section>
+</body>
+</html>

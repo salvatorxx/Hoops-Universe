@@ -1,0 +1,89 @@
+footer{
+    width: 100%;
+    margin: auto;
+    background-color: black;
+    padding: 50px 0 20px;
+    padding-bottom: 50px;
+    color: white;
+}
+footer div img{
+    width: 100%;
+    padding: 0;
+}
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: white;
+}
+.row h1{
+    font-size: 25px;
+}
+.row img{
+    width: 80px;
+    height: 80px;
+}
+#instagram{
+    width: 80px;
+    height: 80px;
+}
+.col1 .contact ,.col3 .partner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.col1 img, .col3 img{
+    margin: 13px;
+}
+.col2{
+    margin-top: 80px;
+    text-align: center;
+}
+.faq{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.faq img{
+    padding: 20px;
+}
+.copyright{
+    text-align: center;
+    color: #8a8a8a;
+    font-size: 20px;
+}
+footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 90px;
+}
+
+@media screen and (max-width: 800px) {
+    footer .row{
+        width: auto;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .faq{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .contact{
+        margin-top: 20px;
+    }
+    .col2, .col3 {
+        margin-top: 40px;
+    }
+    .col1 .contact ,.col3 .partner{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}

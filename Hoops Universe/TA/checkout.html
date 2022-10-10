@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="CSS/checkout.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="icon" href="Assets/icon.png">
+
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+         <!-- Dropdown icon CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        
+        <script src="js/jquery.js"></script>
+        <script src="js/form.js"></script>
+        <script src="js/helper.js"></script>
+
+        <title>Checkout Page</title>
+    </head>
+    <body>
+        <header class="desktop-view">
+            <div class="logo">
+                <a href="index.html"><img src="Assets/logo.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    
+                    <div class="dropdown">
+                        <li><a href="shoes.html" class="dropbtn">Shoes</a></li>
+                        <div class="dropdown-content">
+                            <a href="shoes.html#new-arrival">New Arrival</a>
+                            <a href="shoes.html#best-seller">Best Seller</a>
+                        </div>
+                    </div>
+    
+                    <div class="dropdown">
+                        <li><a href="accessories.html" class="dropbtn">Accessories</a></li>
+                        <div class="dropdown-content">
+                            <a href="accessories.html#new-arrival">New Arrival</a>
+                            <a href="accessories.html#jacket">Hoodies & Track Suit</a>
+                            <a href="accessories.html#basketball">Basketballs</a>
+                            <a href="accessories.html#jersey">Jersey</a>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+    
+        <header class="mobile-view" id="mobile-nav">
+            <i class="fa fa-bars dropbtn-mobile" aria-hidden="true" onclick="dropdown()"></i>
+            <div id="content" class="dropdown-content-mobile">
+                <a href="index.html">Home</a>
+                <a href="shoes.html">Shoes</a>
+                <a href="accessories.html">Accessories</a>
+            </div>
+    
+            <img src="Assets/logo.png" alt="" id="logo-mobile" onclick="window.location.href='index.html'">
+        </header>
+
+        <section class="product-container">
+            <img src="  " alt="" id="currentProduct">
+
+            <div class="container">
+                <ul id="frame"> 
+                    <li>
+                        <h2 id="product-name"></h2>
+                    </li>
+                    <li id="product-price"></li>
+                    <li class="form-group">
+                        Quantity:
+                        <label for="qty"></label>
+                        <input type="number" name="qty" id="qty" value="1" min="1">
+                    </li>
+                    <li class="form-group" id="size-class">
+                        Size:
+                        <label for="size"></label>
+                        <input type="number" name="size" id="size" value="38" min="38" max="50">
+                    </li>
+                    <li id="total-price" class="form-group" style="color: #1cb7b0; font-size: larger;"></li>
+                </ul>
+            </div>
+        </section>
+
+        <form name="form" class="container" onsubmit="return validate()" action="thankyou.html">
+            
+            <h3>Checkout Form</h3>
+
+            <div id="frame">
+                <div class="form-group">
+                    <input type="text" name="name" id="name" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="phonenumber" id="phonenumber" required>
+                    <label for="phonenumber">Phone Number</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="address" id="address" required>
+                    <label for="address">Address</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="postalCode" id="postalCode" required>
+                    <label for="postalCode">Postal Code</label>
+                </div>
+                <div class="form-group">
+                    Additional Notes
+                    <textarea name="notes" id="notes" cols="35" rows="5"></textarea>
+                </div>
+                <div class="">
+                    <label for="paymentMethod">Payment Method</label>
+                    <br>
+                    <select name="paymentMethod" id="paymentMethod">
+                        <option disabled selected value>Select Payment Method</option>
+                        <optgroup label="e-Money">
+                            <option value="QRIS">QRIS</option>
+                            <option value="OVO">OVO</option>
+                            <option value="Dana">Dana</option>
+                            <option value="Go-Pay">Go-Pay</option>
+                        </optgroup>
+                        <optgroup label="Virtual Account">
+                            <option value="Virtual Account BCA">Virtual Account BCA</option>
+                            <option value="Virtual Account Mandiri">Virtual Account Mandiri</option>
+                            <option value="Virtual Account BNI">Virtual Account BNI</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <span id="errMsg" style="color: red"></span>
+                </div>
+                <div>
+                    <p id="paymentLink" style="color: blue; font-size: larger; text-align: center;"></p>
+                </div>
+                <div class="form-group">
+                    <span id="QRSpan" style="visibility: hidden;">Please scan the following QR!</span>
+                    <br><br>
+                    <img src="" alt="" id="QRCODE">
+                </div>  
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="css/product-overlay.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="icon" href="Assets/icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Dropdown icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/helper.js"></script>
+    
+    <title>Hoops Universe</title>
+</head>
+<body>
+    <header class="desktop-view">
+        <div class="logo">
+            <a href="index.html"><img src="Assets/logo.png" alt=""></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                
+                <div class="dropdown">
+                    <li><a href="shoes.html" class="dropbtn">Shoes</a></li>
+                    <div class="dropdown-content">
+                        <a href="shoes.html#new-arrival">New Arrival</a>
+                        <a href="shoes.html#best-seller">Best Seller</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <li><a href="accessories.html" class="dropbtn">Accessories</a></li>
+                    <div class="dropdown-content">
+                        <a href="accessories.html#new-arrival">New Arrival</a>
+                        <a href="accessories.html#jacket">Hoodies & Track Suit</a>
+                        <a href="accessories.html#basketball">Basketballs</a>
+                        <a href="accessories.html#jersey">Jersey</a>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <header class="mobile-view" id="mobile-nav">
+        <i class="fa fa-bars dropbtn-mobile" aria-hidden="true" onclick="dropdown()"></i>
+        <div id="content" class="dropdown-content-mobile">
+            <a href="index.html">Home</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="accessories.html">Accessories</a>
+        </div>
+
+        <img src="Assets/logo.png" alt="" id="logo-mobile" onclick="window.location.href='index.html'">
+    </header>
+
+    <section>
+        <div class="slideshow-container">
+
+            <div class="slides fade">
+                <img src="Assets/carousel/carousel4.png">
+            </div>
+
+            <div class="slides fade">
+                <img src="Assets/carousel/carousel1.png">
+            </div>  
+        
+            <div class="slides fade">
+                <img src="Assets/carousel/carousel2.png">
+            </div>
+        
+            <div class="slides fade">
+                <img src="Assets/carousel/carousel3.png">
+            </div>
+
+            <div class="slides fade">
+                <img src="Assets/carousel/carousel5.png">
+            </div>
+        
+            <a class="prev arrow">&#10094;</a>
+            <a class="next arrow">&#10095;</a>
+        </div>
+    </section>
+
+    <section id="new-arrival" class="product-container">
+        <h1>New Arrival</h1>
+
+        <div class="list-product">
+            <div class="card-product">
+                <img src="Assets/shoe/shoe4.jpg">
+                <div class="overlay overlayFade image-click" id="img4">
+                    <div class="textFade"></div>
+                </div>
+            </div>
+            <div class="card-product">
+                <img src="Assets/shoe/shoe5.jpg" >
+                <div class="overlay overlayFade image-click" id="img5">
+                        <div class="textFade"></div>
+                </div>
+            </div>
+            <div class="card-product">
+                <img src="Assets/shoe/shoe8.jpg">
+                <div class="overlay overlayFade image-click" id="img8">
+                        <div class="textFade"></div>
+                </div>
+            </div>
+            <div class="card-product">
+                <img src="Assets/shoe/shoe9.jpg" >
+                <div class="overlay overlayFade image-click" id="img9">
+                        <div class="textFade"></div>
+                </div>
+            </div>
+            <div class="card-product">
+                <img src="Assets/shoe/shoe14.jpg">
+                <div class="overlay overlayFade image-click" id="img14">
+                        <div class="textFade"></div>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <section id="best-seller" class="product-container headline">
+        <h1 style="color: white;">Best Seller</h1>
+        <div class="list-product">
+            <div class="card-product">
+                <img src="Assets/shoe/shoe13.jpg">
+                <div class="overlay overlayFade image-click" id="img13">
+                        <div class="textFade"></div>
+                </div>
+            </div>
+            <div class="card-product">
+                <img src="Assets/shoe/shoe7.jpg" >
+                <div class="overlay overlayFade image-click" id="img7">
+                        <div class="textFade"></div>
+                </div>
+            </div>
+            <div class="card-product">
+                <img src="Assets/shoe/shoe15.jpg">
+                <div class="overlay overlayFade image-click" id="img15">
+                        <div class="textFade"></div>
+                </div>
+            </div>
+            <div class="card-product">
+                <img src="Assets/shoe/shoe12.jpg">
+                <div class="overlay overlayFade image-click" id="img12">
+                        <div class="textFade"></div>
+                </div>
+            </div>
+            <div class="card-product">
+                <img src="Assets/shoe/shoe8.jpg">
+                <div class="overlay overlayFade image-click" id="img8">
+                        <div class="textFade"></div>
+                </div>
+            </div>
+            <div class="card-product">
+                <img src="Assets/shoe/shoe10.jpg">
+                <div class="overlay overlayFade image-click" id="img10">
+                        <div class="textFade"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <img src="" alt="" id="background">
+        <div class="row">
+            <div class="col1">
+                <h1>Contact Us</h1>
+                <div class="contact">
+                    <a href="https://line.me/en/" target="blank">
+                        <img src="./Assets/footer/line.png" alt="" id="line">
+                    </a>
+                    <a href="https://web.whatsapp.com/" target="blank">
+                        <img src="./Assets/footer/whatsapp.png" alt="" id="whatsapp">
+                    </a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox" target="blank">
+                        <img src="./Assets/footer/gmail.png" alt="" id="gmail">
+                    </a>
+                </div>
+            </div>
+            <div class="col2">
+                <a href="faq.html" style="text-decoration: none; color: white;"><h1>FAQ</h1></a>
+                
+                <div class="faq">
+                    <a href="https://www.instagram.com/hoops.indonesia/" target="blank">
+                        <img src="./Assets/footer/IG.png" alt="" id="IG">
+                    </a>
+                    <a href="https://twitter.com/?lang=en" target="blank">
+                        <img src="./Assets/footer/twitter.png" alt="" id="twitter">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCvT_n77D_IgTz1vH0ILxpLg" target="blank">
+                        <img src="./Assets/footer/youtube.png" alt="" id="youtube">
+                    </a>
+                </div>
+            </div>
+                <div class="col3">
+                    <h1>Partner Brand</h1>
+                    <div class="partner">
+                        <a href="https://air.jordan.com/" target="blank">
+                            <img src="./Assets/footer/air jordan.png" alt="" id="jordan">
+                        </a>
+                        <a href="https://www.adidas.com/us" target="blank">
+                            <img src="./Assets/footer/adidas.png" alt="" id="adidas">
+                        </a>
+                        <a href="https://www.nike.com/id/" target="blank">
+                            <img src="./Assets/footer/nike.png" alt="" id="nike">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <hr>
+        <p class="copyright">©Copyright 2021</p>
+    </footer>
+</body>
+</html>

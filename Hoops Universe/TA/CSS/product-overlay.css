@@ -1,0 +1,34 @@
+/* Product Fade Overlay */
+.overlay {
+    position: absolute;
+    opacity: 0;
+}
+.textFade {
+    color: white;
+    font-weight: 400;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+.overlayFade {
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+    transition: 0.4s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 10px #eee;
+    display: block;
+}
+.card-product:hover .overlayFade {
+    width: 100%;
+    opacity: 80%;
+
+    background-position: right center; 
+}
